@@ -15,8 +15,8 @@ void setup() {
   Serial.println("Bluetooth with 9600");
   btSerial.write("AT");
   delay(1100);
-  while (btSerial.available())
-    Serial.write(btSerial.read());
+  while (btSerial.available())     // optional. Display response
+    Serial.write(btSerial.read()); // can be removed
 
   Serial.println("\nChange name");
   btSerial.write("AT+NAME");
