@@ -19,7 +19,7 @@ void setup() {
     Serial.write(btSerial.read()); // can be removed
 
   Serial.println("\nChange name");
-  btSerial.write("AT+NAME");
+  btSerial.write("AT+NAMEBotName");
   delay(1100);
   while (btSerial.available())
     Serial.write(btSerial.read());
